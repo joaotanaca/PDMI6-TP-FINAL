@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_TP_Final.Views.NovoLivro">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Entry x:Name="txtNome" Placeholder="Nome" />
+            <Entry x:Name="txtAutor" Placeholder="Autor" />
+            <Entry x:Name="txtEmail" Placeholder="E-mail" />
+            <Entry x:Name="txtIsbn" Placeholder="ISBN" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnSalvar" Text="Salvar" Clicked="OnSalvar" />
+                <Button x:Name="btnCancelar" Text="Cancelar" Clicked="OnCancelar" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

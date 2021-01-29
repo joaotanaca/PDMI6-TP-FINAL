@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_TP_Final.MainPage"
+             Title="TP Final- Tanaca">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Novo" Order="Primary" Clicked="handleNew"/>
+        <ToolbarItem Text="Autor" Order="Primary" Clicked="handleAutor"/>
+        <ToolbarItem Text="Coord" Order="Primary" Clicked="handleCoord" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="20">
+        <Label Text="Lista de livros" Font="18" HorizontalTextAlignment="Center" Margin="10" />
+        <ListView x:Name="lstLivros" ItemsSource="{Binding Livros}" ItemTapped="OnLivroTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5,0,5,0">
+                            <Label Text="{Binding Nome}" Font="25" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
